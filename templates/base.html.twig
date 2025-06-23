@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Portfólio{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/output.css') }}">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <div class="relative flex w-full flex-col">
+
+        {% include 'partials/header.html.twig' %}
+        
+        {% block body %}{% endblock %}
+
+        {% include 'partials/footer.html.twig' %}
+
+    </div>
+
+    {# Script global #}
+    <script src="{{ asset('js/script.js') }}"></script>
+
+</body>
+</html>

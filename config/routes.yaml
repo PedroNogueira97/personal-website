@@ -1,0 +1,2 @@
+page_routes:
+    resource: ../src/Page/Routes/routes.yaml 

@@ -1,0 +1,9 @@
+home_page:
+  path: /
+  controller: App\Page\Controller\PageController::home
+  methods: GET
+
+page_show:
+  path: /{slug}
+  controller: App\Page\Controller\PageController::show  
+  methods: GET
