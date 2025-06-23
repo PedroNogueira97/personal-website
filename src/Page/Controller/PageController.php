@@ -2,6 +2,7 @@
 
 namespace App\Page\Controller;
 
+use App\Timeline\Entity\Timeline;
 use App\Page\Entity\Page;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,12 +15,15 @@ final class PageController extends AbstractController
     {
         $page = $entityManager->getRepository(Page::class)->findOneBy(['isHome' => true]);
 
+        $timelineList = $entityManager->getRepository(Timeline::class)->findAll();
+
         if (!$page){
             throw $this->createNotFoundException("Página inicial não encontrada");
         }
 
         return $this->render('page/home.html.twig', [
             'page' => $page,
+            'timelineList' => $timelineList,
         ]);
     }
 
