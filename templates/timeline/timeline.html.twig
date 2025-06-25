@@ -59,8 +59,10 @@
                                 {% for skill in backend %}
                                     <li class="flex gap-4">
                                     <dl class="flex flex-auto flex-wrap gap-x-2">
-                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
-                                    </dd>
+                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }}</dd>
+                                    <div class="bg-gray-200 rounded-full h-4 skills-bar">
+                                        <div class="bg-progress-bar h-4 rounded-full" style="width: {{ skill.level }}%;"></div>
+                                    </div>
                                     </dl>
                                     </li>
                                 {% endfor %}
@@ -72,12 +74,14 @@
 
                                 {% for skill in devops %}
 
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                                    <li class="flex gap-4">
+                                    <dl class="flex flex-auto flex-wrap gap-x-2">
+                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }}</dd>
+                                    <div class="bg-gray-200 rounded-full h-4 skills-bar">
+                                        <div class="bg-progress-bar h-4 rounded-full" style="width: {{ skill.level }}%;"></div>
+                                    </div>
+                                    </dl>
+                                    </li>
 
                                 {% endfor %}
 
@@ -89,11 +93,13 @@
                                 {% for skill in frontend %}
 
                                 <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                                    <dl class="flex flex-auto flex-wrap gap-x-2">
+                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }}</dd>
+                                    <div class="bg-gray-200 rounded-full h-4 skills-bar">
+                                        <div class="bg-progress-bar h-4 rounded-full" style="width: {{ skill.level }}%;"></div>
+                                    </div>
+                                    </dl>
+                                    </li>
 
                                 {% endfor %}
 
