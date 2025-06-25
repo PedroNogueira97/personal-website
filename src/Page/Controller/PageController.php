@@ -43,9 +43,36 @@ final class PageController extends AbstractController
             throw $this->createNotFoundException("Página não encontrada");
         }
 
-        return $this->render('page/index.html.twig', [
+        #This way is not recommended, but is temporary since I will create a admin panel to create pages
+        if ($page->getSlug() === 'about'){
+
+            return $this->render('page/about.html.twig', [
+                'page' => $page,
+            ]);
+
+        } else if ($page->getSlug() === 'projects'){
+
+            return $this->render('page/projects.html.twig', [
+                'page' => $page,
+            ]);
+
+        } else if ($page->getSlug() === 'uses'){
+
+            return $this->render('page/uses.html.twig', [
+                'page' => $page,
+            ]);
+        } else if ($page->getSlug() === 'get-in-touch'){
+
+            return $this->render('page/get-in-touch.html.twig', [
+                'page' => $page,
+            ]);
+
+        } else {
+           return $this->render('page/index.html.twig', [
             'page' => $page,
-        ]);
+        ]); 
+
+        }
 
     }
 
