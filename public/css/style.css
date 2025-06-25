@@ -29,6 +29,10 @@ a:hover, .company-name {
   color: var(--color-hover);
 }
 
+.bg-progress-bar{
+  background-color: var(--color-hover);
+}
+
 /* Botões */
 button,
 input[type="submit"] {
@@ -94,4 +98,14 @@ footer {
 #mobile-menu a.active {
   background-color: #e0e7ff;
   color: #4f46e5;
+}
+
+.skills-bar{
+  width: 90%;
+} 
+
+@media only screen and (max-width: 460px){
+    .skills-bar{
+      width: 75%;
+    }
 }

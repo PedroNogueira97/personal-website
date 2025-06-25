@@ -8,10 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-teal-500: oklch(70.4% 0.14 182.503);
-    --color-indigo-50: oklch(96.2% 0.018 272.314);
-    --color-indigo-100: oklch(93% 0.034 272.788);
-    --color-indigo-600: oklch(51.1% 0.262 276.966);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -315,9 +311,6 @@
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
   }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
-  }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
@@ -391,6 +384,9 @@
   }
   .flex-none {
     flex: none;
+  }
+  .grow {
+    flex-grow: 1;
   }
   .scale-95 {
     --tw-scale-x: 95%;
@@ -506,6 +502,9 @@
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -624,9 +623,6 @@
   .text-gray-500 {
     color: var(--color-gray-500);
   }
-  .text-gray-700 {
-    color: var(--color-gray-700);
-  }
   .text-gray-900 {
     color: var(--color-gray-900);
   }
@@ -704,13 +700,6 @@
   .group-active\:stroke-zinc-600 {
     &:is(:where(.group):active *) {
       stroke: var(--color-zinc-600);
-    }
-  }
-  .hover\:bg-gray-100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-100);
-      }
     }
   }
   .hover\:bg-gray-700 {
@@ -1052,6 +1041,9 @@ a {
 a:hover, .company-name {
   color: var(--color-hover);
 }
+.bg-progress-bar {
+  background-color: var(--color-hover);
+}
 button, input[type="submit"] {
   font-family: var(--font-base);
   background-color: var(--color-hover);
@@ -1098,6 +1090,14 @@ footer {
 #mobile-menu a.active {
   background-color: #e0e7ff;
   color: #4f46e5;
+}
+.skills-bar {
+  width: 90%;
+}
+@media only screen and (max-width: 460px) {
+  .skills-bar {
+    width: 75%;
+  }
 }
 @property --tw-scale-x {
   syntax: "*";
