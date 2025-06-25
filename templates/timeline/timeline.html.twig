@@ -50,140 +50,54 @@
                             <span class="ml-3">Skills</span>
                             </h1>
                                 <ol class="mt-6 space-y-4">
+
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-braces-icon lucide-braces"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>
                                 <span class="ml-3">Backend Stacks:</span>
                                 </h3>
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">PHP</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">MySQL</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Symfony</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Python/Django</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                                
+                                {% for skill in backend %}
+                                    <li class="flex gap-4">
+                                    <dl class="flex flex-auto flex-wrap gap-x-2">
+                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
+                                    </dd>
+                                    </dl>
+                                    </li>
+                                {% endfor %}
 
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server-icon lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
                                 <span class="ml-3">Server/Cloud:</span>
                                 </h3>
 
+                                {% for skill in devops %}
+
                                 <li class="flex gap-4">
                                 <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Linux Ubuntu</dd>
+                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
                                 </dd>
                                 </dl>
                                 </li>
 
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Nginx</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">AWS Service</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Digital Ocean Server</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Docker</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">DNS</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                                {% endfor %}
 
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
                                 <span class="ml-3">Front-end Stacks:</span>
                                 </h3>
 
+                                {% for skill in frontend %}
+
                                 <li class="flex gap-4">
                                 <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">HTML</dd>
+                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }} - {{ skill.level }}%</dd>
                                 </dd>
                                 </dl>
                                 </li>
 
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">CSS</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                                {% endfor %}
 
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Javascript</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">React</dd>
-                                </dd>
-                                </dl>
-                                </li>
-
-                                <li class="flex gap-4">
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                <dt class="sr-only">Skill</dt>
-                                <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Tailwind</dd>
-                                </dd>
-                                </dl>
-                                </li>
+                               
 
                                 </ol>
                             </div>
