@@ -93,8 +93,8 @@
         </div>
     </div>
 
-   {# Include the timeline block and pass the data #}
-    {% include 'timeline/timeline.html.twig' with { timelineList: timelineList } %}
+    {# Include the timeline block and pass the data #}
+    {% include 'timeline/timeline.html.twig' with { timelineList, backend, devops, frontend } %}
 
 </main>            
 {% endblock %}

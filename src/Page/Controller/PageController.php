@@ -3,6 +3,7 @@
 namespace App\Page\Controller;
 
 use App\Timeline\Entity\Timeline;
+use App\Skill\Repository\SkillRepository;
 use App\Page\Entity\Page;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -11,11 +12,13 @@ use Symfony\Component\HttpFoundation\Response;
 final class PageController extends AbstractController
 {
     
-    public function home(EntityManagerInterface $entityManager): Response
+    public function home(EntityManagerInterface $entityManager, SkillRepository $skillRepository): Response
     {
         $page = $entityManager->getRepository(Page::class)->findOneBy(['isHome' => true]);
 
         $timelineList = $entityManager->getRepository(Timeline::class)->findAll();
+
+        $skillsByCategory = $skillRepository->findSkillsGroupedByCategory();
 
         if (!$page){
             throw $this->createNotFoundException("Página inicial não encontrada");
@@ -24,6 +27,10 @@ final class PageController extends AbstractController
         return $this->render('page/home.html.twig', [
             'page' => $page,
             'timelineList' => $timelineList,
+            'backend' => $skillsByCategory['backend'],
+            'devops' => $skillsByCategory['devops'],
+            'frontend' => $skillsByCategory['frontend'],
+
         ]);
     }
 
