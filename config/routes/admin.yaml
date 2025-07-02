@@ -1,6 +1,3 @@
 admin_home:
     path: /admin
     controller: App\Admin\Controller\AdminController::index
-
-page_routes:
-    resource: ../src/Page/Routes/routes.yaml
