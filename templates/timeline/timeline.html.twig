@@ -53,7 +53,7 @@
 
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-braces-icon lucide-braces"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>
-                                <span class="ml-3">Backend Stacks:</span>
+                                <span class="ml-3">Backend:</span>
                                 </h3>
                                 
                                 {% for skill in backend %}
@@ -69,7 +69,7 @@
 
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server-icon lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-                                <span class="ml-3">Server/Cloud:</span>
+                                <span class="ml-3">DevOPS/Cloud:</span>
                                 </h3>
 
                                 {% for skill in devops %}
@@ -87,10 +87,28 @@
 
                                 <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                                <span class="ml-3">Front-end Stacks:</span>
+                                <span class="ml-3">Front-end:</span>
                                 </h3>
 
                                 {% for skill in frontend %}
+
+                                <li class="flex gap-4">
+                                    <dl class="flex flex-auto flex-wrap gap-x-2">
+                                    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ skill.name }}</dd>
+                                    <div class="bg-gray-200 rounded-full h-4 skills-bar">
+                                        <div class="bg-progress-bar h-4 rounded-full" style="width: {{ skill.level }}%;"></div>
+                                    </div>
+                                    </dl>
+                                    </li>
+
+                                {% endfor %}
+
+                                <h3 class="flex font-semibold text-zinc-900 dark:text-zinc-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                                <span class="ml-3">Marketing:</span>
+                                </h3>
+
+                                {% for skill in marketing %}
 
                                 <li class="flex gap-4">
                                     <dl class="flex flex-auto flex-wrap gap-x-2">
