@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block body_class %}bg-zinc-50{% endblock %}
+
+{% block body %}
+
+<main class="flex-auto">
+
+    <div class="sm:px-8 mt-20">
+        <div class="mx-auto w-full max-w-7xl lg:px-8">
+            <div class=" flex relative px-4 sm:px-8 lg:px-12">
+                <div class="w-full">
+                    <div class="max-w-2xl mt-10">
+                        <div class="about-title">
+                            <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">Projects I'm Proud Of (So Far)</h1>
+                        </div>
+                        <div class="about-text">
+                            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">Over the years, I've had the opportunity to work on a variety of exciting web development projects. Here are a few that I'm particularly proud of, showcasing my skills and passion for creating effective digital solutions. While I'm currently exploring opportunities to contribute to the open-source community, these projects represent my commitment to delivering high-quality work and making a positive impact through technology.</p>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto max-w-6xl p-8 mt-10">
+                        <!-- Grid Container -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                            <!-- Card 1: HelioStream -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/0079F2/ffffff/png?text=E" alt="eDirectory Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">eDirectory</h3>
+                                <p class="mt-1 text-base text-gray-600">Real-time video streaming library, optimized for interstellar transmission.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="https://www.edirectory.com/" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">edirectory.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Planetaria -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/497DCB/ffffff/png?text=B" alt="Booktok Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">The BookTok Directory</h3>
+                                <p class="mt-1 text-base text-gray-600">Creating technology to empower civilians to explore space on their own terms.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="https://en-tslw3j3.edirectorycloud.com/" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">thebooktookdirectory.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Animagnary -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/080E51/ffffff/png?text=G" alt="Animagnary Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">Guia de Imóveis na Represa</h3>
+                                <p class="mt-1 text-base text-gray-600">A high-performance web animation library, hand-written in optimized WASM.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="https://guiadeimoveisnarepresa.com.br/" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">guiadeimoveisnarepresa.com.br</a>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: QuantumLeap AI -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/D13C22/ffffff/png?text=M" alt="QuantumLeap AI Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">Margô Criação</h3>
+                                <p class="mt-1 text-base text-gray-600">An intelligent to-do list that automatically schedules your tasks using a priority-based algorithm.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="https://margocriacao.com.br/" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">margocriacao.com.br</a>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Comet UI -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/090302/ffffff/png?text=V" alt="Comet UI Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">Vidalize Digital</h3>
+                                <p class="mt-1 text-base text-gray-600">A comprehensive, accessible, and beautifully designed component library for modern web apps.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="#" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">vidalizedigital.com.br</a>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: EchoDB -->
+                            <div class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="mb-4">
+                                    <img src="https://placehold.co/64x64/CF8F45/ffffff/png?text=A" alt="EchoDB Logo" class="w-12 h-12 rounded-full">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold text-gray-900">Alves do Valle</h3>
+                                <p class="mt-1 text-base text-gray-600">A lightweight, in-memory database designed for fast caching and real-time applications.</p>
+                                <div class="mt-auto pt-4 flex items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-colors group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0l-1.414-1.414a4 4 0 010-5.656m5.656-5.656a4 4 0 015.656 0l1.414 1.414a4 4 0 010 5.656l-1.414 1.414a4 4 0 01-5.656 0" /></svg>
+                                    <a href="https://alvesdovalle.com.br/" class="ml-2 font-medium text-gray-500 transition-colors group-hover:text-teal-600">alvesdovalle.com.br</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                
+            </div>
+        </div>    
+    </div>
+
+</main>
+
+{% endblock %}

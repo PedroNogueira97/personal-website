@@ -7,3 +7,8 @@ page_show:
   path: /{slug}
   controller: App\Page\Controller\PageController::show  
   methods: GET
+
+app_get_in_touch:
+  path: /get-in-touch
+  controller: App\Page\Controller\ContactController::index  
+  methods: GET  

@@ -30,6 +30,7 @@ final class PageController extends AbstractController
             'backend' => $skillsByCategory['backend'],
             'devops' => $skillsByCategory['devops'],
             'frontend' => $skillsByCategory['frontend'],
+            'marketing' => $skillsByCategory['marketing'],
 
         ]);
     }
@@ -53,17 +54,6 @@ final class PageController extends AbstractController
         } else if ($page->getSlug() === 'projects'){
 
             return $this->render('page/projects.html.twig', [
-                'page' => $page,
-            ]);
-
-        } else if ($page->getSlug() === 'uses'){
-
-            return $this->render('page/uses.html.twig', [
-                'page' => $page,
-            ]);
-        } else if ($page->getSlug() === 'get-in-touch'){
-
-            return $this->render('page/get-in-touch.html.twig', [
                 'page' => $page,
             ]);
 

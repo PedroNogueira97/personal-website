@@ -45,7 +45,7 @@ class SkillRepository extends ServiceEntityRepository
 {
     $qb = $this->createQueryBuilder('s')
         ->where('s.category IN (:categories)')
-        ->setParameter('categories', ['backend', 'frontend', 'devops'])
+        ->setParameter('categories', ['backend', 'frontend', 'devops', 'marketing'])
         ->orderBy('s.category', 'ASC')
         ->addOrderBy('s.level', 'DESC'); // ordena por nível, opcional
 
@@ -55,6 +55,7 @@ class SkillRepository extends ServiceEntityRepository
         'backend' => [],
         'frontend' => [],
         'devops' => [],
+        'marketing' => [],
     ];
 
     foreach ($skills as $skill) {
